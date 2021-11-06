@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /*background: linear-gradient(45deg, #fead06, #c00def);*/
+            background-color: rgb(0,0,0);
+            /*background-image: url("../img/fondo2.jpg");*/
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto Mono', monospace;
+        }
+        }
+        .container{
+            width: 90%;
+            min-height: 100vh;
+            margin: auto;
+            position: relative;
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+        .sesion{
+            position: relative;
+            padding: 50px 40px;
+            margin-inline-start: 450px;
+            width: 25%;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, .2);
+        }
+        .sesion h2{
+            color: #111;
+            margin-bottom: 35px;
+            line-height: 1em;
+            font-weight: 500;
+            padding-left: 10px;
+            border-left: 5px solid #e91e63;
+        }
+        .nav-menu{
+            display: flex;
+            list-style: none;
+            position: relative;
+            /*background: rgba(29, 33, 61, 0.5);*/
+            padding: 0 60px;
+            box-sizing: border-box;
+        }
+        .nav-main li a:hover {
+            border-bottom: 2px solid #fff;
+            cursor: pointer;
+        }
+        ul li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 60px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 26px;
+            padding: 6px;
+        }
+        hr{
+            margin: 20px;
+            color: #fff;
+        }
+        .sesion .inputBox{
+            position: relative;
+            width: 300px;
+            height: 46px;
+            margin-bottom: 35px;
+        }
+        .sesion .inputBox:last-child{
+            margin-bottom: 0;
+        }
+        .sesion .inputBox input{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid #111;
+            background: transparent;
+            padding: 10px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 16px;
+            color: #111;
+            font-weight: 300;
+        }
+        .sesion .inputBox input[type="password"]{
+            width: 80%;
+        }
+        .sesion .inputBox span{
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            padding: 10px;
+            display: inline-block;
+            font-size: 16px;
+            color: #111;
+            font-weight: 300;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        .sesion .inputBox input:focus ~ span,
+        .sesion .inputBox input:defined ~ span{
+            transform: translateX(-10px) translateY(-32px);
+            font-size: 12px;
+        }
+        .sesion .inputBox input[type="submit"]{
+            margin-inline-start: 180px;
+            background: #2196f3;
+            color: #fff;
+            border: none;
+            max-width: 120px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .sesion .inputBox input[type="submit"]:hover{
+            background: #e91e63;
+        }
+        .sesion .inputBox a{
+            text-decoration: none;
+            color: #111;
+        }
+        .sesion .inputBox a:hover{
+            color: #e91e63;
+            cursor: pointer;
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="barra">
+            <nav class="nav-main">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="index.html"><b>Bus and Bus</b></a>
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+        </div>
+        <div class="sesion">
+        
+            <h2>Iniciar Sesión</h2>
+            
+            <form>
+              
+                <div class="inputBox">
+                    <input type="email" required="required">
+                    <span>Dirección de Correo</span>
+                </div>
+                
+                <div class="inputBox">
+                    <input type="password" name="Contrasenia1" required="required">
+                    <span>Contraseña</span>
+                </div>
+                
+                <div class="inputBox">
+                    <a href="registrarcliente.html" >Crear Cuenta</a>
+                    <input class="btn" type="submit" value="Aceptar">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function mostrarContrasenia(){
+            var image = document.getElementById("btnImagen");
+            if(image.src.match("ver")){
+                image.src="img/ocultar.png";
+            }else{
+                image.src="img/ver.png";
+            }
+            var tipo = document.getElementById("Password");
+            if(tipo.type == "password"){
+                tipo.type="text";
+            }else{
+                tipo.type="password";
+            }
+            tipo = document.getElementById("Contraseña");
+            if(tipo.type == "password"){
+                tipo.type="text";
+            }else{
+                tipo.type="password";
+            }
+            function myFunction() {
+  var popup = document.getElementById("btnImagen");
+  popup.classList.toggle("show");
+}
+        }
+    </script>
+</body>
+</html>
